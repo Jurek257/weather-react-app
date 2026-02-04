@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import MainCard from "./components/MainCard/MainCard";
 import CardGroup from "./components/CardGroup/CardGroup";
 import { Assets } from "./shared/assets";
+import { getUserPosition } from "./services/GeolocationAPI";
+getUserPosition;
 
 function App() {
+  useEffect(() => {
+    getUserPosition();
+  }, []);
+
   //todo connect weather API
   const forecast = [
     { day: "Montag", temperature: 18, icon: Assets.PartlyCloudy },

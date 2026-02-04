@@ -1,40 +1,24 @@
 import { useState } from "react";
 import "./App.css";
-
-import PartlyCloudy from "./assets/cloudy.png";
-import Sunny from "./assets/sun.png";
-import Rain from "./assets/heavy-rain.png";
-import Snow from "./assets/snow.png";
+import MainCard from "./components/MainCard/MainCard";
+import CardGroup from "./components/CardGroup/CardGroup";
+import { Assets } from "./shared/assets";
 
 function App() {
+  const forecast = [
+    { day: "Montag", temperature: 18, icon: Assets.PartlyCloudy },
+    { day: "Dienstag", temperature: 22, icon: Assets.Sunny },
+    { day: "Mittwoch", temperature: 15, icon: Assets.Rain },
+    { day: "Donnerstag", temperature: 20, icon: Assets.Sunny },
+    { day: "Freitag", temperature: 17, icon: Assets.PartlyCloudy },
+    { day: "Samstag", temperature: 19, icon: Assets.Sunny },
+  ];
+
   return (
     <div className="container">
-      <div className="main-card">
-        <h3>Chemnnitz</h3>
-        <h4>Montag</h4>
-        <img
-          src={PartlyCloudy}
-          alt="weather image"
-          width="128px"
-          height="128px"
-        />
-        <p>Today is {} C</p>
-        <p></p>
-      </div>
+      <MainCard></MainCard>
 
-      <div className="card-group">
-        <div className="card">
-          <h4>Montag</h4>
-          <img
-            src={PartlyCloudy}
-            alt="weather image"
-            width="64px"
-            height="64px"
-          />
-          <p>Today is {} C</p>
-          <p></p>
-        </div>
-      </div>
+      <CardGroup forecastDailyList={forecast}></CardGroup>
     </div>
   );
 }

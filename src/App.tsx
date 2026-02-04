@@ -5,6 +5,7 @@ import CardGroup from "./components/CardGroup/CardGroup";
 import { Assets } from "./shared/assets";
 
 function App() {
+  //todo connect weather API
   const forecast = [
     { day: "Montag", temperature: 18, icon: Assets.PartlyCloudy },
     { day: "Dienstag", temperature: 22, icon: Assets.Sunny },
@@ -14,11 +15,18 @@ function App() {
     { day: "Samstag", temperature: 19, icon: Assets.Sunny },
   ];
 
+  const today = forecast[0];
+  const nextDays = forecast.slice(1);
+
   return (
     <div className="container">
-      <MainCard></MainCard>
+      <MainCard
+        day={today.day}
+        temperature={today.temperature}
+        icon={today.icon}
+      ></MainCard>
 
-      <CardGroup forecastDailyList={forecast}></CardGroup>
+      <CardGroup forecastDailyList={nextDays}></CardGroup>
     </div>
   );
 }

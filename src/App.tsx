@@ -3,7 +3,7 @@ import "./App.css";
 import MainCard from "./components/MainCard/MainCard";
 import CardGroup from "./components/CardGroup/CardGroup";
 import { Assets } from "./shared/assets";
-import { getUserPosition } from "./services/GeolocationAPI";
+import { getUserPosition } from "./services/getCoordinates";
 getUserPosition;
 
 function App() {

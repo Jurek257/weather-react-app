@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import MainCard from "./components/MainCard/MainCard";
 import CardGroup from "./components/CardGroup/CardGroup";

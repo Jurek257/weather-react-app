@@ -1,15 +1,14 @@
+import type { CardProps } from "../CardGroup/Card";
 import modulStyles from "./MainCard.module.css";
 
-interface MainCardProps {
-  day: string;
-  temperature: number;
-  icon: string;
+interface MainCardProps extends CardProps {
+  cityName: string;
 }
 
-function MainCard({ day, temperature, icon }: MainCardProps) {
+function MainCard({ day, temperature, icon, cityName }: MainCardProps) {
   return (
     <div className={modulStyles.mainCard}>
-      <h3>Chemnnitz</h3>
+      <h3>{cityName}</h3>
       <h4>{day}</h4>
       <img src={icon} alt="weather image" width="128px" height="128px" />
       <p>Today is {temperature} °C</p>

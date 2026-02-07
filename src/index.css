@@ -26,6 +26,16 @@ body {
   margin: 0;
   min-height: 100vh;
   width: 100%;
+  color: #000 !important; /* всегда чёрный текст */
+  -webkit-text-fill-color: #000 !important; /* для Safari и iOS */
+}
+
+/* Предотвращаем автоматическое изменение цвета при dark mode на iOS */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
 }
 
 h1 {

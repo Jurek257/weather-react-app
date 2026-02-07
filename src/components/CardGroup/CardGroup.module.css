@@ -13,8 +13,11 @@
 
 .cardGroup {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .card p {

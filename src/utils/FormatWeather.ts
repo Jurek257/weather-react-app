@@ -19,7 +19,7 @@ export function formateWeatherByDay(forecastArray: any, dayIndex: number) {
 
   return {
     day: formateDayName(dayWeatherData.dt_txt),
-    temperature: dayWeatherData.main.temp,
+    temperature: Math.round(dayWeatherData.main.temp),
     icon: formateIconUrl(dayWeatherData.weather[0].icon),
   };
 }

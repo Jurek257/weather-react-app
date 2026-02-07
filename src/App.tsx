@@ -20,10 +20,6 @@ function App() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    loadWeathher();
-  }, []);
-
   async function loadWeathher() {
     try {
       const coords = await getUserPosition();
@@ -48,7 +44,11 @@ function App() {
   }
 
   if (hasLocationPermision === null)
-    return <LocationPermisionPreloadOverlay></LocationPermisionPreloadOverlay>;
+    return (
+      <LocationPermisionPreloadOverlay
+        onGeolocationAllowed={loadWeathher}
+      ></LocationPermisionPreloadOverlay>
+    );
 
   if (loading) {
     return (

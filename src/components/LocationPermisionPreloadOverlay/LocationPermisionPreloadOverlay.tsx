@@ -1,14 +1,24 @@
 import "./LocationPermisionPreloadOverlay.css";
 
-export function LocationPermisionPreloadOverlay() {
+interface LocationPermisionPreloadOverlayProps {
+  onGeolocationAllowed: () => void;
+}
+
+export function LocationPermisionPreloadOverlay({
+  onGeolocationAllowed,
+}: LocationPermisionPreloadOverlayProps) {
   return (
-    <div>
+    <div className="locationPermisionPreloadOverlay">
       <h3>
-        For more accuracy Weather forecast in your region , we need your
-        location permisson
+        Für eine präzisere Wettervorhersage in Ihrer Region benötigen wir den
+        Zugriff auf Ihren Standort.
       </h3>
 
-      <h6>Dont worry , i dont collect information about your position😊</h6>
+      <h4>
+        Keine Sorge, ich speichere keine Informationen über Ihren Standort. 😊
+      </h4>
+
+      <button onClick={onGeolocationAllowed}>Standort freigeben</button>
     </div>
   );
 }

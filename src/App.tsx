@@ -4,8 +4,7 @@ import "./App.css";
 import MainCard from "./components/MainCard/MainCard";
 import CardGroup from "./components/CardGroup/CardGroup";
 import { LocationPermisionPreloadOverlay } from "./components/LocationPermisionPreloadOverlay/LocationPermisionPreloadOverlay.tsx";
-
-import { Assets } from "./shared/assets";
+import { formateWeatherByDay } from "./utils/FormatWeather.ts";
 
 import { getUserPosition } from "./services/getCoordinates";
 import { getCityByCoordinates } from "./services/getCity";
@@ -24,19 +23,6 @@ function App() {
   useEffect(() => {
     loadWeathher();
   }, []);
-
-  //TODO: temporary solution, connect weather API , after delete that
-  const forecast = [
-    { day: "Montag", temperature: 18, icon: Assets.PartlyCloudy },
-    { day: "Dienstag", temperature: 22, icon: Assets.Sunny },
-    { day: "Mittwoch", temperature: 15, icon: Assets.Rain },
-    { day: "Donnerstag", temperature: 20, icon: Assets.Sunny },
-    { day: "Freitag", temperature: 17, icon: Assets.PartlyCloudy },
-    { day: "Samstag", temperature: 19, icon: Assets.Sunny },
-  ];
-
-  const today = forecast[0];
-  const nextDays = forecast.slice(1);
 
   async function loadWeathher() {
     try {
@@ -70,16 +56,16 @@ function App() {
       </div>
     );
   }
+
+  const days = [0, 1, 2, 3, 4].map((i) =>
+    formateWeatherByDay(forecastArray, i),
+  );
+
   return (
     <div className="container">
-      <MainCard
-        day={today.day}
-        temperature={today.temperature}
-        icon={today.icon}
-        cityName={city}
-      ></MainCard>
+      <MainCard {...days[0]} cityName={city}></MainCard>
 
-      <CardGroup forecastDailyList={nextDays}></CardGroup>
+      <CardGroup forecastDailyList={days.slice(1)}></CardGroup>
     </div>
   );
 }

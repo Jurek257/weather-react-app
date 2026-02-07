@@ -27,6 +27,7 @@ function App() {
   async function loadWeathher() {
     try {
       const coords = await getUserPosition();
+      setLocationPermision(true);
 
       const cityName = await getCityByCoordinates(coords.lat, coords.lon);
       setCity(cityName);
@@ -37,9 +38,9 @@ function App() {
       );
       setForecastArray(weatherForecastArray);
 
-      setLocationPermision(true);
+      setLoading(true);
     } catch (err) {
-      setLocationPermision(true);
+      setLocationPermision(false);
       setError("Loding weather went wrong");
     } finally {
       setLoading(false);
@@ -53,6 +54,13 @@ function App() {
     return (
       <div>
         <h3>Loading...</h3>
+      </div>
+    );
+  }
+  if (error) {
+    return (
+      <div>
+        <p>{error}</p>
       </div>
     );
   }

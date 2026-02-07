@@ -1,5 +1,8 @@
-#Wettervorhersage App
-Applikation zur Anzeige des Wetters für heute und die nächsten 4 Tage. Erstellt mit React.js + TypeScript und der OpenWeather API.
+# 🌤 Wettervorhersage App
+
+**Beschreibung:**  
+Eine Webapplikation zur Anzeige des aktuellen Wetters und der Wettervorhersage für die nächsten 4 Tage.  
+Erstellt mit **React.js**, **TypeScript** und der **OpenWeather API**.
 
 #Live Demo
 

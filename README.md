@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+#Wettervorhersage App
+Applikation zur Anzeige des Wetters für heute und die nächsten 4 Tage. Erstellt mit React.js + TypeScript und der OpenWeather API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Live Demo
 
-Currently, two official plugins are available:
+  #Technologien
+# 🛠 Technologien im Projekt
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎨 Frontend
+| Technologie      | Zweck                     |
+|-----------------|---------------------------|
+| **React**        | UI-Bibliothek für Komponenten |
+| **TypeScript**   | Statische Typisierung und Sicherheit |
+| **Vite**         | Schneller Projekt-Bundler |
+| **CSS Modules**  | Isolierte Styles, um Konflikte zu vermeiden |
 
-## React Compiler
+## ⚡ Backend (Serverless)
+| Technologie                  | Zweck                                              |
+|-------------------------------|--------------------------------------------------|
+| **Vercel Serverless Functions** | Bereitstellung von API-Endpunkten (`/api/weather`, `/api/geocode`) |
+| **Node.js**                   | Server-Laufzeitumgebung für die Ausführung von Funktionen |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 API
+| Dienst                        | Zweck                           |
+|-------------------------------|--------------------------------|
+| **OpenWeather API**           | Wetterdaten und Geocoding      |
+| **Browser Geolocation API**   | Abrufen der Benutzerkoordinaten |
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ☁️ Infrastruktur
+| Technologie          | Zweck                             |
+|---------------------|----------------------------------|
+| **Vercel**          | Hosting und Deployment           |
+| **GitHub**          | Versionierung und Code-Speicherung |
+| **Environment Variables** | Verbergen von API-Schlüsseln   |

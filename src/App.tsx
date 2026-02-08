@@ -7,7 +7,7 @@ import { LocationPermisionPreloadOverlay } from "./components/LocationPermisionP
 import { formateWeatherByDay } from "./utils/FormatWeather.ts";
 
 import { getUserPosition } from "./services/getCoordinates";
-import { getCityByCoordinates } from "./services/getCity";
+import { getCityByCoordinates } from "./services/getCityByCoordinates.ts";
 import { getWeatherByCoordinates } from "./services/getWeatherByCoordinstes";
 
 function App() {

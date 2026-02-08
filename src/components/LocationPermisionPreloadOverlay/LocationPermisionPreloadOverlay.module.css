@@ -1,0 +1,14 @@
+.locationPermisionPreloadOverlay button {
+  margin-top: 10px;
+  border: 2px solid #000;
+  background-color: white !important;
+}
+
+.cityInput[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cityInput::placeholder {
+  opacity: 0.5;
+}

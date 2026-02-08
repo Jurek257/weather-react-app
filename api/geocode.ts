@@ -1,4 +1,6 @@
-export default async function handler(req, res) {
+import type { VercelRequest, VercelResponse } from "./vercelTypes";
+
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   const { lat, lon } = req.query;
 
   const API_KEY = process.env.OPEN_WEATHER_API_KEY;

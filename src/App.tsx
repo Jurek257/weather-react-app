@@ -6,7 +6,7 @@ import CardGroup from "./components/CardGroup/CardGroup";
 import { LocationPermisionPreloadOverlay } from "./components/LocationPermisionPreloadOverlay/LocationPermisionPreloadOverlay.tsx";
 import { formateWeatherByDay } from "./utils/FormatWeather.ts";
 
-import { getUserPosition } from "./services/getCoordinates";
+import { getUserPosition } from "./services/getCoordinatesByUser.ts";
 import { getCityByCoordinates } from "./services/getCityByCoordinates.ts";
 import { getWeatherByCoordinates } from "./services/getWeatherByCoordinstes";
 

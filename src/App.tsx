@@ -10,7 +10,6 @@ import { getUserPosition } from "./services/getCoordinatesByUser.ts";
 import { getCityByCoordinates } from "./services/getCityByCoordinates.ts";
 import { getWeatherByCoordinates } from "./services/getWeatherByCoordinstes";
 import { getCoordinatesByCity } from "./services/getCoordinatesByCity.ts";
-getCoordinatesByCity;
 
 function App() {
   const [hasLocationPermision, setLocationPermision] = useState<boolean | null>(
@@ -52,13 +51,18 @@ function App() {
     try {
       const coords = await getCoordinatesByCity(cityName);
       setCity(cityName);
+      setLocationPermision(true);
       const weatherForecastArray = await getWeatherByCoordinates(
         coords.lat,
         coords.lon,
       );
 
       setForecastArray(weatherForecastArray);
-    } catch (error) {}
+    } catch (error) {
+      setError("weather loading went wrong");
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (hasLocationPermision === null)

@@ -16,5 +16,5 @@ export async function getCoordinatesByCity(
     throw new Error("City not Found");
   }
 
-  return { lat: firstResultCity.lon, lon: firstResultCity.lon };
+  return { lat: firstResultCity.lat, lon: firstResultCity.lon };
 }

@@ -9,6 +9,8 @@ import { formateWeatherByDay } from "./utils/FormatWeather.ts";
 import { getUserPosition } from "./services/getCoordinatesByUser.ts";
 import { getCityByCoordinates } from "./services/getCityByCoordinates.ts";
 import { getWeatherByCoordinates } from "./services/getWeatherByCoordinstes";
+import { getCoordinatesByCity } from "./services/getCoordinatesByCity.ts";
+getCoordinatesByCity;
 
 function App() {
   const [hasLocationPermision, setLocationPermision] = useState<boolean | null>(
@@ -43,10 +45,27 @@ function App() {
     }
   }
 
+  async function manuallyLoadWeatherByCity(cityName: string) {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const coords = await getCoordinatesByCity(cityName);
+      setCity(cityName);
+      const weatherForecastArray = await getWeatherByCoordinates(
+        coords.lat,
+        coords.lon,
+      );
+
+      setForecastArray(weatherForecastArray);
+    } catch (error) {}
+  }
+
   if (hasLocationPermision === null)
     return (
       <LocationPermisionPreloadOverlay
         onGeolocationAllowed={loadWeathher}
+        manuallyLoadWeatherByCity={manuallyLoadWeatherByCity}
       ></LocationPermisionPreloadOverlay>
     );
 
@@ -57,7 +76,7 @@ function App() {
       </div>
     );
   }
-  if (error) {
+  if (error || hasLocationPermision === false) {
     return (
       <div>
         <p>{error}</p>

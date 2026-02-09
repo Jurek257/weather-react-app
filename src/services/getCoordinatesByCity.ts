@@ -1,11 +1,6 @@
-type Coordinates = {
-  lat: number;
-  lon: number;
-};
-
 export async function getCoordinatesByCity(
   cityName: string,
-): Promise<Coordinates> {
+): Promise<{ lat: number; lon: number }> {
   const response = await fetch(
     `api/cityToCoordinates?cityName=${encodeURIComponent(cityName)}`,
   );

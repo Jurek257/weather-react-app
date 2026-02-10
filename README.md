@@ -13,7 +13,8 @@ Erstellt mit **React.js**, **TypeScript** und der **OpenWeather API**.
 ![how app working demo](https://github.com/Jurek257/weather-react-app/blob/main/readme-sources/Screenshot%20from%202026-02-10%2018-22-37.png)
 
 # Live Demo
-[Live Demo , click hier](https://weather-react-71du2l95o-lobacovurij-3557s-projects.vercel.app/)
+
+<a href="https://weather-react-71du2l95o-lobacovurij-3557s-projects.vercel.app" target="_blank" rel="noopener noreferrer" >
 
 # 🛠 Technologien im Projekt
 

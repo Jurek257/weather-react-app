@@ -1,14 +1,18 @@
 # 🌤 Wettervorhersage App
 
-**Beschreibung:**  
+## **Beschreibung:**  
 Eine Webapplikation zur Anzeige des aktuellen Wetters und der Wettervorhersage für die nächsten 4 Tage.  
 Erstellt mit **React.js**, **TypeScript** und der **OpenWeather API**.
 
-#Screenshots 
+# Screenshots 
 ![first menu overlay](https://github.com/Jurek257/weather-react-app/blob/main/readme-sources/Screenshot%20from%202026-02-10%2018-22-13.png)
+## Es gibt 2 Möglichkeiten Wetter zu bekommen 
+1. Standort von Ihren Browser abrufen
+2. Direkt der Stadt eingeben
 
+![how app working demo](https://github.com/Jurek257/weather-react-app/blob/main/readme-sources/Screenshot%20from%202026-02-10%2018-22-37.png)
 
-#Live Demo
+# Live Demo
 [Live Demo , click hier](https://weather-react-71du2l95o-lobacovurij-3557s-projects.vercel.app/)
 
 # 🛠 Technologien im Projekt

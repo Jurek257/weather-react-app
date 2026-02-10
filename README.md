@@ -5,8 +5,8 @@ Eine Webapplikation zur Anzeige des aktuellen Wetters und der Wettervorhersage f
 Erstellt mit **React.js**, **TypeScript** und der **OpenWeather API**.
 
 #Live Demo
+[Live Demo , click hier](weather-react-app-blush-nu.vercel.app)
 
-  #Technologien
 # 🛠 Technologien im Projekt
 
 ## 🎨 Frontend

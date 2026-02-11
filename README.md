@@ -14,7 +14,7 @@ Erstellt mit **React.js**, **TypeScript** und der **OpenWeather API**.
 
 # Live Demo
 
-<a href="https://weather-react-71du2l95o-lobacovurij-3557s-projects.vercel.app" target="_blank" rel="noopener noreferrer" > Open Live Demo , click here </a>
+[https://weather-react-app-blush-nu.vercel.app/](https://weather-react-app-blush-nu.vercel.app/)
 
 # 🛠 Technologien im Projekt
 

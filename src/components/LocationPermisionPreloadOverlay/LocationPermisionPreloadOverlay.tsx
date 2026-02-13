@@ -33,7 +33,7 @@ export function LocationPermisionPreloadOverlay({
           type="text"
           id="city-intput"
           name="city-input"
-          placeholder="(pls for current work look for city in English)"
+          placeholder="(pls write in Eng)"
           value={cityInput}
           onChange={(e) => setCityInput(e.target.value)}
         />

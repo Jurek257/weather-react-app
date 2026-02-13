@@ -21,14 +21,11 @@ export function LocationPermisionPreloadOverlay({
 
   return (
     <div className={styles.locationPermisionPreloadOverlay}>
-      <h3>
-        Für eine präzisere Wettervorhersage in Ihrer Region benötigen wir den
-        Zugriff auf Ihren Standort.
-      </h3>
+      <h3>For weather forrecast we need your geolocation</h3>
 
       <button onClick={onGeolocationAllowed}>Standort Abrufen</button>
 
-      <p>oder</p>
+      <p>or input him manuelly</p>
 
       <form onSubmit={handleCityInputSubmit}>
         <input

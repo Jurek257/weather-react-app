@@ -25,7 +25,7 @@ export function LocationPermisionPreloadOverlay({
 
       <button onClick={onGeolocationAllowed}>Request geolocation</button>
 
-      <p>or input him manuelly</p>
+      <p>or input city manuelly</p>
 
       <form onSubmit={handleCityInputSubmit}>
         <input

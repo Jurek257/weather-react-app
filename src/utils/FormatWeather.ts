@@ -1,6 +1,6 @@
 export function formateDayName(dateString: string): string {
   const dateObject = new Date(dateString);
-  return dateObject.toLocaleDateString("de-DE", { weekday: "long" });
+  return dateObject.toLocaleDateString("en-EN", { weekday: "long" });
 }
 
 export function formateIconUrl(iconCode: string): string {

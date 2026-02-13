@@ -23,7 +23,7 @@ export function LocationPermisionPreloadOverlay({
     <div className={styles.locationPermisionPreloadOverlay}>
       <h3>For weather forrecast we need your geolocation</h3>
 
-      <button onClick={onGeolocationAllowed}>Standort Abrufen</button>
+      <button onClick={onGeolocationAllowed}>Request geolocation</button>
 
       <p>or input him manuelly</p>
 
@@ -33,7 +33,7 @@ export function LocationPermisionPreloadOverlay({
           type="text"
           id="city-intput"
           name="city-input"
-          placeholder="Find the  city manuel"
+          placeholder="(pls for current work look for city in English)"
           value={cityInput}
           onChange={(e) => setCityInput(e.target.value)}
         />

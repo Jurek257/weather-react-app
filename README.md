@@ -1,14 +1,14 @@
-# 🌤 Wettervorhersage App
+# 🌤 Weather Forecast App
 
-## **Beschreibung:**  
-Eine Webapplikation zur Anzeige des aktuellen Wetters und der Wettervorhersage für die nächsten 4 Tage.  
-Erstellt mit **React.js**, **TypeScript** und der **OpenWeather API**.
+## **Description:**  
+A web application for displaying current weather and weather forecast for the next 4 days.
+Built with **React.js**, **TypeScript** and the **OpenWeather API**.
 
 # Screenshots 
 ![first menu overlay](https://github.com/Jurek257/weather-react-app/blob/main/readme-sources/Screenshot%20from%202026-02-10%2018-22-13.png)
-## Es gibt 2 Möglichkeiten Wetter zu bekommen 
-1. Standort von Ihren Browser abrufen
-2. Direkt der Stadt eingeben
+## There are 2 ways to get weather 
+1. Retrieve location from your browser
+2. Enter the city directly
 
 ![how app working demo](https://github.com/Jurek257/weather-react-app/blob/main/readme-sources/Screenshot%20from%202026-02-10%2018-22-37.png)
 
@@ -16,31 +16,31 @@ Erstellt mit **React.js**, **TypeScript** und der **OpenWeather API**.
 
 [https://weather-react-app-blush-nu.vercel.app/](https://weather-react-app-blush-nu.vercel.app/)
 
-# 🛠 Technologien im Projekt
+# 🛠 Technologies in the Project
 
 ## 🎨 Frontend
 | Technologie      | Zweck                     |
 |-----------------|---------------------------|
-| **React**        | UI-Bibliothek für Komponenten |
-| **TypeScript**   | Statische Typisierung und Sicherheit |
-| **Vite**         | Schneller Projekt-Bundler |
-| **CSS Modules**  | Isolierte Styles, um Konflikte zu vermeiden |
+| **React**        | UI library for components |
+| **TypeScript**   | Static typing and safety |
+| **Vite**         | Fast project bundler |
+| **CSS Modules**  | Isolated styles to avoid conflicts |
 
 ## ⚡ Backend (Serverless)
 | Technologie                  | Zweck                                              |
 |-------------------------------|--------------------------------------------------|
-| **Vercel Serverless Functions** | Bereitstellung von API-Endpunkten (`/api/weather`, `/api/geocode`) |
-| **Node.js**                   | Server-Laufzeitumgebung für die Ausführung von Funktionen |
+| **Vercel Serverless Functions** | Providing API endpoints (`/api/weather`, `/api/geocode`) |
+| **Node.js**                   | Server runtime environment for executing functions |
 
 ## 🌐 API
 | Dienst                        | Zweck                           |
 |-------------------------------|--------------------------------|
-| **OpenWeather API**           | Wetterdaten und Geocoding      |
-| **Browser Geolocation API**   | Abrufen der Benutzerkoordinaten |
+| **OpenWeather API**           | Weather data and geocoding      |
+| **Browser Geolocation API**   | Retrieving user coordinates |
 
 ## ☁️ Infrastruktur
 | Technologie          | Zweck                             |
 |---------------------|----------------------------------|
 | **Vercel**          | Hosting und Deployment           |
-| **GitHub**          | Versionierung und Code-Speicherung |
-| **Environment Variables** | Verbergen von API-Schlüsseln   |
+| **GitHub**          | Version control and code storage |
+| **Environment Variables** | Hiding API keys   |
